@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Pagenav.scss";
-const Pagenav = ({ navData }) => {
+const Pagenav = ({ navData, color }) => {
   console.log(navData);
+  const style = {
+    color: color,
+  };
   return (
     <div className="page-nav">
       {Object.entries(navData).map((item) => {
         return (
           <div className="page-nav-item">
-            <Link to="/" className="page-nav-link">
+            <Link to="/" className="page-nav-link" style={style}>
               {/* {console.log("ITEM", item)}
               {console.log(item[1].work)} */}
               {item[1].work}
@@ -18,7 +21,9 @@ const Pagenav = ({ navData }) => {
       })}
       <div className="page-nav-line"></div>
       <div className="page-nav-item nav-copyright">
-        <div className="copyright">@/2023</div>
+        <div className="copyright" style={style}>
+          @/2023
+        </div>
       </div>
       {/* <div className="left-nav-item">
       <a href="" className="left-nav-link">

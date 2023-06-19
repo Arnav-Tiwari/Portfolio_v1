@@ -23,7 +23,7 @@ const Work = () => {
         {
           filter: "blur(0px)",
           opacity: 1,
-          duration: 0.5,
+          duration: 0.7,
         },
         0.8
       );
@@ -33,7 +33,7 @@ const Work = () => {
   });
   return (
     <div className="work">
-      <Pagenav navData={navData} />
+      <Pagenav navData={navData} color="white" />
       <div className="work-overlay"></div>
       <div className="work-wrapper">
         <div className="section-left">
